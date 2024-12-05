@@ -1,5 +1,8 @@
 ## Pell Network Node Setup 
 
+![image](https://github.com/user-attachments/assets/274cc570-ec41-4551-9742-e4cbbec1e77d)
+
+
 Sistem paketlerini güncellemek ve yükseltmek için aşağıdaki komutu çalıştırın:
 
 ```bash
@@ -34,4 +37,42 @@ docker-compose --version
 ```bash
 sudo groupadd docker
 sudo usermod -aG docker $USER
+```
+
+## 6. Docker Giriş : 
+
+```bash
+docker login -u pellnetwork
+```
+
+- Key : 
+
+```bash
+dckr_pat_caHIV_ijk654lnOJ-6vvedJfLNc
+```
+
+## 7. İmageleri İndireceğiz : 
+
+```bash
+docker pull docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
+```
+
+## 8. Node'u Başlatalım : 
+
+- Düz Hali Budur : 
+
+![image](https://github.com/user-attachments/assets/4ca54882-49df-43d5-bfff-a5564a980913)
+
+- Biz burada <your_local_path> kısmına kendi sunucumuzdaki dizine göre /root/.pellcored olarak ayarladık - iç dış - bilgilerin kaydedilmesi için içeriyide yazmak gerek.
+
+
+```bash
+docker run -d --name=pell-validator \
+    -v /root/.pellcored:/root/.pellcored \
+    -e MONIKER="<your_node_name>" \
+    -p 26656:26656 \
+    -p 26660:26660 \
+    -d \
+    --entrypoint /usr/local/bin/start-pellcored.sh \
+    docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
 ```
