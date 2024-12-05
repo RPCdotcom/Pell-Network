@@ -92,3 +92,11 @@ docker exec -it pell-validator /bin/bash
 ```bash
 pellcored keys add cüzdanismi
 ```
+
+#### Cüzdan alın - kayıt edin - Proje ekibinden token istemeniz lazım. Tokeni Proje veriyor.
+
+##### Cüzdana Gelip Gelmediğini Kontrol Etmek için : 
+
+```bash
+pellcored query bank balances pellcuzdanadresin
+```
