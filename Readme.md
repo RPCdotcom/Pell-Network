@@ -80,3 +80,15 @@ docker run -d --name=pell-validator \
     --entrypoint /usr/local/bin/start-pellcored.sh \
     docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
 ```
+
+## 9. Container İçine Girelim : 
+```bash
+docker exec -it pell-validator /bin/bash
+```
+
+#### Burada kendinizi sanki Cosmos node kurar gibi hissedin lakin herşey container içerisinde - bilgilerde sunucunuzda root dizinin altında .pellcored dizininde bulunuyor.
+
+## 10 . Cüzdan Oluşturma : 
+```bash
+pellcored keys add cüzdanismi
+```
