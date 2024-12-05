@@ -100,3 +100,46 @@ pellcored keys add cüzdanismi
 ```bash
 pellcored query bank balances pellcuzdanadresin
 ```
+
+## Sunucu Ağ İle Senkron Olmasını Mecbur Bekleyeceğiz : 
+```bash
+docker logs -f pell-validator -n 150
+```
+- Loglarınızda blocklar gözükecektir. Misal "11:19PM INF indexed block events height=25748 module=txindex server=node"  sunucum 25748. blockta.
+
+- Güncel block takip : https://testnet.pell.explorers.guru/ 
+
+![image](https://github.com/user-attachments/assets/29bfac58-5b3d-4037-9f9b-285a094f6b62)
+
+## 11. Validator Olusturma : 
+
+- Değiştirmeniz gereklenleri biliyorsunuz - Moniker - İdentitiy Keybase yada Uport - Website - Security - Details - From cüzdan adı 
+
+```bash
+
+cat > ./validator.json << EOF
+{
+	"pubkey": $(pellcored tendermint show-validator),
+	"amount": "1000000000000000000apell",
+	"moniker": "<your_node_name>",
+	"identity": "optional identity signature (ex. UPort or Keybase)",
+	"website": "validator's (optional) website",
+	"security": "validator's (optional) security contact email",
+	"details": "validator's (optional) details",
+	"commission-rate": "0.1",
+	"commission-max-rate": "0.2",
+	"commission-max-change-rate": "0.01",
+	"min-self-delegation": "1"
+}
+EOF
+
+
+pellcored tx staking create-validator ./validator.json \
+--chain-id=ignite_186-1 \
+--fees=0.000001pell \
+--gas=1000000 \
+--from=<your_node_name>
+
+```
+
+
