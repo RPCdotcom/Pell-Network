@@ -2,6 +2,12 @@
 
 ![image](https://github.com/user-attachments/assets/274cc570-ec41-4551-9742-e4cbbec1e77d)
 
+These are the recommended specs for a Pell node.
+
+- CPUS: 4 CPUs
+- Memory: 8 GB Memory
+- Data Disk: 500+ GB Data Disk
+
 
 Sistem paketlerini güncellemek ve yükseltmek için aşağıdaki komutu çalıştırın:
 
