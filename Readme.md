@@ -142,4 +142,11 @@ pellcored tx staking create-validator ./validator.json \
 
 ```
 
+###### Doğrulayıcınızın oluşturulduğunu doğrulamak için doğrulayıcınızın mevcut durumunu gösteren bu komutu çalıştırın.
 
+- <your_node_name> kısmını düzenleyip yapıştırın.
+
+```bash
+pellcored query staking validator $(pellcored keys show <your_node_name> --bech val -a)
+
+```
