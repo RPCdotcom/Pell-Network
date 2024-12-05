@@ -65,6 +65,10 @@ docker pull docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
 
 - Biz burada <your_local_path> kısmına kendi sunucumuzdaki dizine göre /root/.pellcored olarak ayarladık - iç dış - bilgilerin kaydedilmesi için içeriyide yazmak gerek.
 
+- Monikeri ayarlayın - <your_node_name> kısmı misal MONIKER="RPCdotcom"
+
+- Portlara biz ellemedik - değiştirmek size kalmış.
+
 
 ```bash
 docker run -d --name=pell-validator \
