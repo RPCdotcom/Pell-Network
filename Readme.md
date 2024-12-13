@@ -67,7 +67,8 @@ docker pull docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
 
 - Düz Hali Budur : 
 
-![image](https://github.com/user-attachments/assets/4ca54882-49df-43d5-bfff-a5564a980913)
+![image](https://github.com/user-attachments/assets/266c1e30-513a-44bf-a2f6-98d86737c358)
+
 
 - Biz burada <your_local_path> kısmına kendi sunucumuzdaki dizine göre /root/.pellcored olarak ayarladık - iç dış - bilgilerin kaydedilmesi için içeriyide yazmak gerek.
 
