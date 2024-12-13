@@ -80,11 +80,12 @@ docker pull docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
 docker run -d --name=pell-validator \
     -v /root/.pellcored:/root/.pellcored \
     -e MONIKER="<your_node_name>" \
+    -e FAST_SYNC=true \
     -p 26656:26656 \
     -p 26660:26660 \
     -d \
     --entrypoint /usr/local/bin/start-pellcored.sh \
-    docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
+    docker.io/pellnetwork/pellnode:v1.0.23-ignite-testnet
 ```
 
 ## 9. Container İçine Girelim : 
