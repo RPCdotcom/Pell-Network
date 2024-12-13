@@ -60,7 +60,7 @@ dckr_pat_caHIV_ijk654lnOJ-6vvedJfLNc
 ## 7. İmageleri İndireceğiz : 
 
 ```bash
-docker pull docker.io/pellnetwork/pellnode:v1.0.11-ignite-testnet
+docker pull docker.io/pellnetwork/pellnode:v1.0.23-ignite-testnet
 ```
 
 ## 8. Node'u Başlatalım : 
